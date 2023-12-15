@@ -1,5 +1,5 @@
 # introduction
-When we initialize a container, if we accidentally make a port mapping error, we need to modify to rebuild the container or modify the docker configuration file manually.  
+When we initialize a container, if we accidentally make a port mapping mistake, we need to rebuild the container or modify the docker configuration file manually.  
 This tool is designed to automate the process of modifying docker configuration files.
 # demo
 This demo shows how container-cli can modify the port mapping of a container named python
@@ -24,7 +24,7 @@ docker restarted, please restart your container
 ## step1 install pipx
 By default, ubuntu doesn't have a way to install pipx using pip, so we have to:
 ```
-sudo apt-get install pipx && pipx ensurepath
+sudo apt-get update && sudo apt-get install pipx && pipx ensurepath
 ```
 After that we need to shut down the terminal and reenter it (or just reboot)
 ## step2 install container-cli
@@ -33,4 +33,8 @@ pipx install container-cli
 ```
 
 # usage
-Type `cc` or `container-cli` on the command line to start, and follow the prompts.
+Type `cc` or `container_cli` on the command line to start, and follow the prompts.
+
+## Star History
+
+![Star History Chart](https://api.star-history.com/svg?repos=yixinnb/container-cli&type=Date)

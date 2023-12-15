@@ -12,8 +12,14 @@ def __ask_ports():
         h = questionary.text("Please input host port, empty to exit").ask()
         if h == "":
             break
-        c = questionary.text("Please input container port, empty to exit").ask()
+        c = questionary.text("Please input corresponding container port, empty to exit").ask()
         target_ports[h] = c
+
+    for host_port in target_ports:
+        container_port=target_ports[host_port]
+        print(f"host port {host_port} <-> container port {container_port}")
+    if not questionary.confirm("Is these correct?").ask():
+        sys.exit(-1)
     return target_ports
 
 
@@ -54,7 +60,5 @@ def __update_ports(id, ports: dict):
 
 def change_ports(container_id):
     target_ports = __ask_ports()
-    if not questionary.confirm("confirm?").ask():
-        sys.exit(-1)
     __update_ports(container_id, target_ports)
     logger.info("finished")

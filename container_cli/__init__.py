@@ -20,7 +20,7 @@ def __close_docker():
         else:
             logger.error("can NOT close docker")
             time.sleep(5)
-    subprocess.getstatusoutput("service docker stop")
+    # subprocess.getstatusoutput("service docker stop")
 
 
 def __start_docker():

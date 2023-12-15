@@ -1,7 +1,7 @@
 from setuptools import setup
 from setuptools import find_packages
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 GITHUB_REPOSITORY_URL = "https://github.com/yixinNB/container-cli"
 
 with open('README.md', 'r', encoding='utf-8') as f:
